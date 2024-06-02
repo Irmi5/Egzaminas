@@ -1,0 +1,26 @@
+﻿<Window x:Class="Egzaminas_I.K_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Egzaminas_I.K_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Margin="50,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="50,169,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="50,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="50,143,0,0" VerticalAlignment="Top"/>
+        <Button Content="Create an Account" HorizontalAlignment="Left" Margin="59,281,0,0" VerticalAlignment="Top" Click="signUp_Click"/>
+        <Label Content="Don't have an account?" HorizontalAlignment="Left" Margin="50,250,0,0" VerticalAlignment="Top"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="80,217,0,0" VerticalAlignment="Top" Width="60" Click="homePage_Click"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="710,360,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="Exit_Click"/>
+        <Button Content="Brute Force" HorizontalAlignment="Left" Margin="400,98,0,0" VerticalAlignment="Top" Click="Brute_Force_Click"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <TextBlock x:Name="currentAttemptTextBlock" HorizontalAlignment="Left" Margin="400,118,0,0" VerticalAlignment="Top" Width="201" Height="60" TextWrapping="Wrap"/>
+        <Button x:Name="ChangePass" Content="Change Password" HorizontalAlignment="Left" Margin="55,345,0,0" VerticalAlignment="Top" Width="110" Click="ChangePass_Click"/>
+        <Slider x:Name="threadsSlider" Minimum="1" Maximum="16" TickFrequency="1" IsSnapToTickEnabled="True" Value="4" Width="200" Margin="400,200,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="threadsCountTextBlock" Text="{Binding ElementName=threadsSlider, Path=Value}" HorizontalAlignment="Left" Margin="610,200,0,0" VerticalAlignment="Top" Width="50"/>
+        <Label Content="Threads:" HorizontalAlignment="Left" Margin="400,170,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
